@@ -56,7 +56,7 @@ def git():
         repo.heads[config.UPSTREAM_BRANCH].set_tracking_branch(
             origin.refs[config.UPSTREAM_BRANCH]
         )
-        repo.heads[config.UPSTREAM_BRANCH].checkout(True)
+        repo.heads[config.UPSTREAM_BRANCH].checkout(False)
         try:
             repo.create_remote("origin", config.UPSTREAM_REPO)
         except BaseException:
